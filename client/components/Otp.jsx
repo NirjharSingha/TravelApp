@@ -66,12 +66,13 @@ const Otp = ({ setShowOtp }) => {
 
     const otpObject = JSON.parse(localStorage.getItem("otpObject"));
     let dataToSend, username, password;
+    const signupDto = otpObject.signupDto;
 
     if (otpObject !== undefined && otpObject !== null) {
       dataToSend = {
         userEmail:
           otpObject.type === "REGISTER"
-            ? signupDto.id
+            ? otpObject.signupDto.id
             : otpObject.type === "FORGOT_PASSWORD"
             ? otpObject.id
             : "",

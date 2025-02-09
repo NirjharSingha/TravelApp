@@ -14,11 +14,10 @@ public class TicketDto {
     int id;
     String userId;
     int vehicle_id;
-    Timestamp datetime;
+    String datetime;
     String from;
     String to;
     float price;
     public String vehicle_type;
-    int owner_id;
     String seat_class;
 }

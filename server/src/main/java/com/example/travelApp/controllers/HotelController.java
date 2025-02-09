@@ -2,7 +2,7 @@ package com.example.travelApp.controllers;
 
 import com.example.travelApp.dto.*;
 import com.example.travelApp.services.impl.HotelServiceImpl;
-import com.example.travelApp.services.impl.PaymentServiceImpl;
+import com.example.travelApp.services.impl.PaymentServiceAdapter;
 import com.stripe.exception.StripeException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class HotelController {
     private HotelServiceImpl hotelService;
 
     @Autowired
-    private PaymentServiceImpl paymentService;
+    private PaymentServiceAdapter paymentService;
 
     @PostMapping("/regHotel")
     public ResponseEntity<String> regHotel(@RequestParam(value = "documents", required = false) MultipartFile[] files,

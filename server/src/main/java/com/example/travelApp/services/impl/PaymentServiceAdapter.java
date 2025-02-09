@@ -9,7 +9,7 @@ import com.stripe.param.checkout.SessionCreateParams;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PaymentServiceImpl implements PaymentService {
+public class PaymentServiceAdapter implements PaymentService {
 
     @Value("${stripe.secret-key}")
     String stripeSecretKey;
